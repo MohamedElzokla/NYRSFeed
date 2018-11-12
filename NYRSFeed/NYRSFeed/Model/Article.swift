@@ -20,6 +20,7 @@ class Article: NSObject,Mappable {
     var abstract : String?
     var id :Int?
     var assetId :Int?
+    var media : [Media]?
     required init?(map: Map) {
         
     }
@@ -35,8 +36,48 @@ class Article: NSObject,Mappable {
         source <- map["source"]
         title <- map["title"]
         abstract <- map["abstract"]
-
+        media <- map["media"]
     }
     
 
+}
+
+
+
+class Media : NSObject, Mappable {
+    var type : String?
+    var subtype : String?
+    var caption : String?
+    var copyright : String?
+    var meta : [MediaMetaData]?
+    required init?(map: Map) {
+        
+    }
+    
+    func mapping(map: Map) {
+        type <- map["type"]
+        subtype <- map["subtype"]
+        caption <- map["caption"]
+        copyright <- map["copyright"]
+        meta <- map["media-metadata"]
+    }
+}
+
+
+class MediaMetaData : NSObject , Mappable {
+    var url : String?
+    var format : String?
+    var height : Double?
+    var width : Double?
+   
+    required init?(map: Map) {
+        
+    }
+    
+    func mapping(map: Map) {
+        url <- map["url"]
+        format <- map["format"]
+        height <- map["height"]
+        width <- map["width"]
+    }
 }

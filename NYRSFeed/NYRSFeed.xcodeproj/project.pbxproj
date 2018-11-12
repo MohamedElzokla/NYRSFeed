@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BEADEFA4219996F300E19B6D /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEADEFA3219996F300E19B6D /* String+Extension.swift */; };
+		BEADEFA82199A88200E19B6D /* HomeDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEADEFA72199A88200E19B6D /* HomeDetailsVC.swift */; };
+		BEADEFAA2199BF8A00E19B6D /* SideMenuTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEADEFA92199BF8A00E19B6D /* SideMenuTVC.swift */; };
 		BED2F0AE2198D47B00B89269 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED2F0AD2198D47B00B89269 /* AppDelegate.swift */; };
 		BED2F0B32198D47B00B89269 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED2F0B12198D47B00B89269 /* Main.storyboard */; };
 		BED2F0B52198D47E00B89269 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BED2F0B42198D47E00B89269 /* Assets.xcassets */; };
@@ -49,6 +51,8 @@
 		7F2395A4564EF779FA89FC1D /* Pods_NYRSFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYRSFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8247E603E08707087FD97996 /* Pods-NYRSFeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYRSFeed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NYRSFeed/Pods-NYRSFeed.debug.xcconfig"; sourceTree = "<group>"; };
 		BEADEFA3219996F300E19B6D /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		BEADEFA72199A88200E19B6D /* HomeDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailsVC.swift; sourceTree = "<group>"; };
+		BEADEFA92199BF8A00E19B6D /* SideMenuTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTVC.swift; sourceTree = "<group>"; };
 		BED2F0AA2198D47B00B89269 /* NYRSFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYRSFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BED2F0AD2198D47B00B89269 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BED2F0B22198D47B00B89269 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -116,6 +120,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BEADEFAB2199C1D200E19B6D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BED2F0B12198D47B00B89269 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		BED2F0A12198D47B00B89269 = {
 			isa = PBXGroup;
 			children = (
@@ -145,7 +157,7 @@
 				BED2F0DD2198D7C900B89269 /* Controller */,
 				BED2F0F12199793A00B89269 /* Model */,
 				BED2F0AD2198D47B00B89269 /* AppDelegate.swift */,
-				BED2F0B12198D47B00B89269 /* Main.storyboard */,
+				BEADEFAB2199C1D200E19B6D /* Storyboards */,
 				BED2F0B42198D47E00B89269 /* Assets.xcassets */,
 				BED2F0B62198D47E00B89269 /* LaunchScreen.storyboard */,
 				BED2F0B92198D47E00B89269 /* Info.plist */,
@@ -207,6 +219,7 @@
 			children = (
 				BED2F0E72198E55800B89269 /* HomeVC.swift */,
 				BED2F0F221997C3C00B89269 /* HomeTVC.swift */,
+				BEADEFA72199A88200E19B6D /* HomeDetailsVC.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -215,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				BED2F0E02198DA1400B89269 /* SideMenuVC.swift */,
+				BEADEFA92199BF8A00E19B6D /* SideMenuTVC.swift */,
 			);
 			path = "Side menu";
 			sourceTree = "<group>";
@@ -383,6 +397,7 @@
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/MMDrawerController/MMDrawerController.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -393,6 +408,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMDrawerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,6 +424,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BED2F0AE2198D47B00B89269 /* AppDelegate.swift in Sources */,
+				BEADEFA82199A88200E19B6D /* HomeDetailsVC.swift in Sources */,
 				BED2F0E82198E55800B89269 /* HomeVC.swift in Sources */,
 				BED2F0DF2198D94700B89269 /* BaseVC.swift in Sources */,
 				BED2F0EA2198E70E00B89269 /* WebService.swift in Sources */,
@@ -415,6 +432,7 @@
 				BED2F0F321997C3C00B89269 /* HomeTVC.swift in Sources */,
 				BED2F0F02199793500B89269 /* Article.swift in Sources */,
 				BED2F0EE2199762C00B89269 /* ServerResponse.swift in Sources */,
+				BEADEFAA2199BF8A00E19B6D /* SideMenuTVC.swift in Sources */,
 				BED2F0E12198DA1400B89269 /* SideMenuVC.swift in Sources */,
 				BED2F0E32198DAC600B89269 /* UIView+Extension.swift in Sources */,
 				BED2F0EC2198F2AE00B89269 /* Enums.swift in Sources */,

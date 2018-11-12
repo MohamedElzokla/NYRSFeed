@@ -32,6 +32,22 @@ class HomeVC: BaseVC {
         loadDatasource()
     }
     
+    //MARK:- API
+
+    /// Queries the api with selected section, if section was nil the a default section is viewed which is "all-sections"
+    ///
+    /// - Parameter section: filtered section
+    func loadDatasource(section:String = "all-sections" ){
+        self.showLoadingIndicator()
+        WebService.getMostViewedArticles { (response) in
+            self.hideLoadingIndicator()
+            if let newArticles = response?.articles{
+                self.articles = newArticles
+            }else {
+                self.showAlert(message: response?.error?.message ?? "")
+            }
+        }
+    }
     //MARK:- Actions
     @IBAction func sectionSelectionAction(_ sender: Any) {
         let sections = ["Arts","Education","Automobiles","Blogs","Books","all-sections"]
@@ -46,20 +62,17 @@ class HomeVC: BaseVC {
     }
     
     @IBAction func searchBtnAction(_ sender: Any) {
+        
     }
     
-    func loadDatasource(section:String = "all-sections" ){
-        self.showLoadingIndicator()
-        WebService.getMostViewedArticles { (response) in
-            self.hideLoadingIndicator()
-            if let newArticles = response?.articles{
-                self.articles = newArticles
-            }else {
-                self.showAlert(message: response?.error?.message ?? "")
-            }
+    
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toArticleInfo"{
+            let vc = segue.destination as?  HomeDetailsVC
+            vc?.articleInfo = sender as? Article
         }
     }
-
     
     
 }
@@ -77,6 +90,10 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
         let article = searchResults?[indexPath.row]
         cell?.loadArticle(article: article)
         return cell ?? UITableViewCell()
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let article = searchResults?[indexPath.row]
+        performSegue(withIdentifier: "toArticleInfo", sender:article)
     }
 }
 
