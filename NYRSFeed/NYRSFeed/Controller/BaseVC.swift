@@ -9,6 +9,7 @@
 import UIKit
 import MMDrawerController
 import SVProgressHUD
+
 class BaseVC: UIViewController {
 
     override func viewDidLoad() {
@@ -35,6 +36,7 @@ class BaseVC: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     //MARK:- Side menu button
+    
     func addSideMenuBtn(){
         let leftBtn = MMDrawerBarButtonItem.init(target: self, action: #selector(sideMenuBtnPressed))
         leftBtn?.tintColor = .white

@@ -9,6 +9,7 @@
 import XCTest
 @testable import NYRSFeed
 
+
 class NYRSFeedTests: XCTestCase {
 
     override func setUp() {
@@ -19,9 +20,13 @@ class NYRSFeedTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
+    func testWebService() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let endpoint = Enums.WebService.EndPoint.mostViewed
+        WebService.getMostViewedArticles { (<#ArticleResponse?#>) in
+            <#code#>
+        }
     }
 
     func testPerformanceExample() {
