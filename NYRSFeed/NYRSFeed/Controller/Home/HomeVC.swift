@@ -19,6 +19,12 @@ class HomeVC: BaseVC {
         loadDatasource()
     }
     
+    //MARK:- Actions
+    @IBAction func sectionSelectionAction(_ sender: Any) {
+    }
+    
+    @IBAction func searchBtnAction(_ sender: Any) {
+    }
     func loadDatasource(){
         self.showLoadingIndicator()
         WebService.getMostViewedArticles { (response) in

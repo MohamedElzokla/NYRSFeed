@@ -26,7 +26,7 @@ class WebError:NSObject {
             status = Enums.WebService.ErrorCode(rawValue: code)
         }else {
             isSuccess = false
-            message = ""
+            message = (json?["errors"] as? [String])?.first
             status = Enums.WebService.ErrorCode.other
         }
     }
