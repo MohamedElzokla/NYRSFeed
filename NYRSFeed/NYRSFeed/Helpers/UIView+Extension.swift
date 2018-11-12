@@ -72,10 +72,9 @@ extension UIViewController {
         guard let nc = storyboard.instantiateViewController(withIdentifier: identifier) as? UINavigationController else {
             fatalError("Could not instantiate initial storyboard with name: \(storyBoardName)")
         }
-        
-        nc.navigationBar.shadowImage = UIImage();
-        
         return nc
     }
 
 }
+
+

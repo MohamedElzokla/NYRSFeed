@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BEADEFA4219996F300E19B6D /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEADEFA3219996F300E19B6D /* String+Extension.swift */; };
 		BED2F0AE2198D47B00B89269 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED2F0AD2198D47B00B89269 /* AppDelegate.swift */; };
 		BED2F0B32198D47B00B89269 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED2F0B12198D47B00B89269 /* Main.storyboard */; };
 		BED2F0B52198D47E00B89269 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BED2F0B42198D47E00B89269 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		085EF5B0877825BD6C3168CA /* Pods-NYRSFeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYRSFeed.release.xcconfig"; path = "Pods/Target Support Files/Pods-NYRSFeed/Pods-NYRSFeed.release.xcconfig"; sourceTree = "<group>"; };
 		7F2395A4564EF779FA89FC1D /* Pods_NYRSFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYRSFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8247E603E08707087FD97996 /* Pods-NYRSFeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYRSFeed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NYRSFeed/Pods-NYRSFeed.debug.xcconfig"; sourceTree = "<group>"; };
+		BEADEFA3219996F300E19B6D /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		BED2F0AA2198D47B00B89269 /* NYRSFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYRSFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BED2F0AD2198D47B00B89269 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BED2F0B22198D47B00B89269 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				BED2F0E92198E70E00B89269 /* WebService.swift */,
 				BED2F0ED2199762C00B89269 /* ServerResponse.swift */,
 				BED2F0EB2198F2AE00B89269 /* Enums.swift */,
+				BEADEFA3219996F300E19B6D /* String+Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				BED2F0E82198E55800B89269 /* HomeVC.swift in Sources */,
 				BED2F0DF2198D94700B89269 /* BaseVC.swift in Sources */,
 				BED2F0EA2198E70E00B89269 /* WebService.swift in Sources */,
+				BEADEFA4219996F300E19B6D /* String+Extension.swift in Sources */,
 				BED2F0F321997C3C00B89269 /* HomeTVC.swift in Sources */,
 				BED2F0F02199793500B89269 /* Article.swift in Sources */,
 				BED2F0EE2199762C00B89269 /* ServerResponse.swift in Sources */,

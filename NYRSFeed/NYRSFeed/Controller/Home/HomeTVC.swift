@@ -25,12 +25,12 @@ class HomeTVC: UITableViewCell {
     
    
     
-    func loadArticle(article:Article){
+    func loadArticle(article:Article?){
         self.article = article
-        abstractLabel?.text = article.abstract
-        byLineLabel?.text = article.byline
-        sourceLabel?.text = article.source
-        publishDateLabel?.text = article.publishedDateString
+        abstractLabel?.text = article?.abstract
+        byLineLabel?.text = article?.byline
+        sourceLabel?.text = article?.source
+        publishDateLabel?.text = article?.publishedDateString
         selectionStyle = .none
     }
 
